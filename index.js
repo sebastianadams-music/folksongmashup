@@ -36,10 +36,13 @@ button.addEventListener('click', () => {
     audioCtx.resume();
   }
   console.log(audioCtx.state)
+  let loading = document.getElementById("loading")
+ loading.textContent = "loading audio files, this could take a while..."
   
   loadTracks(12)
   .then((sources) => playAll(sources))
   .then(() => pauseSeq(sources))
+  .then(() => loading.textContent = "")
 
 //   someProcedure(10)
 //   .then(console.log)
