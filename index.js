@@ -129,8 +129,9 @@ async function loadTracks(n){
 async function loadTrack(){
 
 let choice = getRandomInt(1, 34)
-let song = "/folksongs/audio" + choice + ".mp3"
-const sample = setupSample(song)
+// let song = "/folksongs/audio" + choice + ".mp3"
+let song_gh = "https://github.com/sebastianadams-music/folksongmashup/blob/main/folksongs/audio" + choice + ".mp3?raw=true"
+const sample = setupSample(song_gh)
 return sample 
 }
 
